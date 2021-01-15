@@ -1,34 +1,45 @@
 import React from 'react'
-import logo from './logo.svg';
-import './App.css';
+import styles from './App.module.css';
 
 function App() {
+  const [products, setProducts] = React.useState([])
+  const [discounts, setDiscounts] = React.useState([])
 
   React.useEffect(() => {
     fetch(`${process.env.REACT_APP_API_URL}/api/v1/products`)
       .then(response => response.json())
-      .then(data => console.log(data))
+      .then(data => setProducts(data.data))
     fetch(`${process.env.REACT_APP_API_URL}/api/v1/discounts`)
       .then(response => response.json())
-      .then(data => console.log(data))
+      .then(data => setDiscounts(data.data))
   }, [])
 
+  const wrapperHandlerAdd = (product) => () => {
+    console.log(product)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div>
+      <header>
+        Wallmart
       </header>
+      <section className={styles.area_products}>
+        {products.length > 0 ? products.map(e => (
+          <article className={styles.product} key={e._id}>
+            <div className={styles.product__image}>
+              <img src={e.image} alt={e.description} />
+            </div>
+            <div className={styles.product__info}>
+              <h3><strong>{e.brand}</strong> {e.description}</h3>
+              <strong>{e.price}</strong>
+            </div>
+            <div className={styles.product__actions}>
+              <button onClick={wrapperHandlerAdd(e)}>Agregar</button>
+            </div>
+          </article>
+        )) : (
+            <div>Loading...</div>
+          )}
+      </section>
     </div>
   );
 }
