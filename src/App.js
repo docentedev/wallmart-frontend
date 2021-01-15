@@ -1,7 +1,18 @@
+import React from 'react'
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+  React.useEffect(() => {
+    fetch(`${process.env.REACT_APP_API_URL}/api/v1/products`)
+      .then(response => response.json())
+      .then(data => console.log(data))
+    fetch(`${process.env.REACT_APP_API_URL}/api/v1/discounts`)
+      .then(response => response.json())
+      .then(data => console.log(data))
+  }, [])
+
   return (
     <div className="App">
       <header className="App-header">
