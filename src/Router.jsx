@@ -4,38 +4,19 @@ import {
     Switch,
     Route,
 } from "react-router-dom";
-import Cart from './components/Cart/Cart';
-import CartPage from './CartPage';
+import Cart from './components/cart/Cart';
+import CartPage from './containers/cart/Cart';
 import Home from './containers/home/Home';
-import Header from './components/Header/Header';
+import Header from './components/header/Header';
 
-function Router({
-    addItem,
-    cartItems,
-    removeItem,
-    substractItem,
-    get,
-}) {
+function Router() {
     return (
         <BrowserRouter>
             <Header />
-            <Cart
-                cartItems={cartItems}
-                removeItem={removeItem}
-                addItem={addItem}
-                substractItem={substractItem}
-            />
+            <Cart />
             <Switch>
                 <Route path="/cart">
-                    <CartPage
-                        cartItems={cartItems}
-                        removeItem={removeItem}
-                        addItem={addItem}
-                        substractItem={substractItem}
-                    />
-                </Route>
-                <Route path="/">
-                    <Home addItem={addItem} getItem={get} substractItem={substractItem} />
+                    <CartPage />
                 </Route>
                 <Route path="/">
                     <Home />
