@@ -20,4 +20,10 @@
     background: white;
     box-shadow: 0 0 12px 0 #e6e5e5;
     height: 100%;
+    width: 400px;
+}
+
+.cart_item_container {
+    height: 220px;
+    overflow-y: auto;
 }

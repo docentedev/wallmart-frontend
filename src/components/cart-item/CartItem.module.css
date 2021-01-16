@@ -1,0 +1,8 @@
+.cart_item {
+    display: grid;
+    grid-template-columns: 73px 1fr 1fr;
+}
+
+.cart_item img {
+    width: 63px;
+}
