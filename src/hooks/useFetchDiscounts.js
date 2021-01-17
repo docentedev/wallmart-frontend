@@ -1,15 +1,21 @@
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 
 const useFetchDiscounts = () => {
-    const [items, setItems] = React.useState([])
+    const discounts = useSelector(state => state.discounts.items)
+
+    const dispatch = useDispatch()
 
     React.useEffect(() => {
         fetch(`${process.env.REACT_APP_API_URL}/api/v1/discounts`)
             .then(response => response.json())
-            .then(data => setItems(data.data))
-    }, [])
+            .then(data => dispatch({
+                type: 'DISCOUNTS_SET',
+                payload: data.data,
+            }))
+    }, [dispatch])
 
-    return { items }
+    return { discounts }
 }
 
 export default useFetchDiscounts
