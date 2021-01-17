@@ -12,7 +12,7 @@ function Home() {
                 {products.length > 0 ? products.map((e, i) => (
                     <Product key={i} product={e} />
                 )) : (
-                        <div>Loading...</div>
+                        <div>Cargando...</div>
                     )}
             </section>
         </div>
