@@ -1,4 +1,10 @@
-function compare(a, b) {
+export const showDiscountNok = (ok, nok) => {
+    if (nok.length > 0 && nok[0].discount > (ok.length > 0 ? ok[0].discount : 0))
+        return nok[0].text
+    return ''
+}
+
+const compare = (a, b) => {
     if (a.discount < b.discount) {
         return -1;
     }
@@ -14,10 +20,15 @@ export const messageDiscountNok = (items) => {
     Object.keys(items).forEach((key, i) => {
         const item = items[key]
         if (!item.discountApplied) {
-            const missingForDiscount = `Agrega ${currencyFormat(item.missingForDiscount)}`
-            const discount = `un descuento total de ${currencyFormat(item.discount)} en tu compra!`
+            const missingForDiscount = (<span>
+                Agrega <strong>{currencyFormat(item.missingForDiscount)}</strong>
+            </span>)
+            const discount = (<span>
+                un descuento total de <strong>{currencyFormat(item.discount)}</strong>{' '}
+                    en tu compra!
+            </span>)
             itemsMessage.push({
-                text: `${missingForDiscount} más en productos ${key} y aprovecha ${discount}`,
+                text: (<p>{missingForDiscount} más en productos {key} y aprovecha {discount}</p>),
                 discount: item.discount
             })
         }
@@ -32,10 +43,14 @@ export const messageDiscountOk = (items) => {
     Object.keys(items).forEach((key) => {
         const item = items[key]
         if (item.discountApplied) {
-            const total = `comprado ${currencyFormat(item.threshold)} de productos`
-            const discount = `un descuento de ${currencyFormat(item.discount)}`
+            const total = (<span>
+                comprado <strong>{currencyFormat(item.threshold)}</strong> de productos
+            </span>)
+            const discount = (<span>
+                un descuento de <strong>{currencyFormat(item.discount)}</strong>
+            </span>)
             message.push({
-                text: `Se aplicó ${discount} por haber ${total} ${key}!.`,
+                text: (<p>* Se aplicó {discount} por haber {total} {key}!.</p>),
                 discount: item.discount,
             })
         }
