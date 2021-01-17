@@ -3,7 +3,7 @@ import useCart from '../../hooks/useCart'
 import { currencyFormat } from '../../utils'
 import styles from './CartItem.module.css'
 
-const CartItem = ({ product, }) => {
+const CartItem = ({ product }) => {
     const { addItem, substractItem, removeItem } = useCart()
 
     return (
