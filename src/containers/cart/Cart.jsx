@@ -1,13 +1,8 @@
 import CartItem from '../../components/cart-item/CartItem'
 import useCart from '../../hooks/useCart'
 import useDiscounts from '../../hooks/useDiscounts'
-import { currencyFormat, messageDiscountOk, messageDiscountNok } from '../../utils'
-
-const showDiscounNok = (ok, nok) => {
-    if (nok.length > 0 && nok[0].discount > (ok.length > 0 ? ok[0].discount : 0))
-        return (<div>{nok[0].text}</div>)
-    return ''
-}
+import { currencyFormat, messageDiscountOk, messageDiscountNok, showDiscountNok } from '../../utils'
+import styles from './Cart.module.css'
 
 function Cart() {
     const {
@@ -26,25 +21,41 @@ function Cart() {
     const msgDiscountNok = messageDiscountNok(discountsByItems)
 
     return (
-        <div>
-            {cartItems.map((product, i) => (
-                <CartItem product={product} key={i} />
-            ))}
-            <div>
-                {showDiscounNok(msgDiscountOk, msgDiscountNok)}
+        <div className={styles.cart_container}>
+            {cartItems.length > 0 ? (<div className={styles.cart_container__cart_card}>
+                <h1>Resumen</h1>
                 <div>
-                    Subtotal de productos: {currencyFormat(getTotal())}<br />
+                    {cartItems.map((product, i) => (
+                        <CartItem product={product} key={i} />
+                    ))}
                 </div>
-                {msgDiscountOk.length > 0 && (
-                    <div>
-                        Descuento por marca: -{currencyFormat(msgDiscountOk[0].discount)}
+                <div className={styles.cart_container__cart_card__resume}>
+                    <div className={styles.cart_container__cart_card__resume__discountNok}>
+                        {showDiscountNok(msgDiscountOk, msgDiscountNok)}
                     </div>
-                )}
-                <div>
-                    Total a pagar: {currencyFormat(totalWithDiscount)}
+                    <div className={styles.cart_container__cart_card__resume__item}>
+                        <div>Subtotal de productos:</div>
+                        <div>{currencyFormat(getTotal())}</div>
+                    </div>
+                    {msgDiscountOk.length > 0 && (
+                        <div className={styles.cart_container__cart_card__resume__item}>
+                            <div>Descuento por marca:</div>
+                            <div>-{currencyFormat(msgDiscountOk[0].discount)}</div>
+                        </div>
+                    )}
+                    <div className={styles.cart_container__cart_card__resume__itemTotal}>
+                        <div>Total a pagar:</div>
+                        <div>{currencyFormat(totalWithDiscount)}</div>
+                    </div>
+                    {msgDiscountOk.length > 0 && (
+                        <div className={styles.cart_container__cart_card__resume__discountOk}>
+                            {msgDiscountOk[0].text}
+                        </div>
+                    )}
                 </div>
-                {msgDiscountOk.length > 0 && (<div>{msgDiscountOk[0].text}</div>)}
-            </div>
+            </div>) : (
+                    <div className={styles.cart_container__no_product}>Aun no ha agregado ningun producto</div>
+                )}
         </div>
     );
 }
