@@ -2,11 +2,9 @@ import React from 'react'
 import styles from './Home.module.css'
 import Product from '../../components/product/Product'
 import useFetchProducts from '../../hooks/useFetchProducts'
-import useFetchDiscounts from '../../hooks/useFetchDiscounts'
 
 function Home() {
     const { items: products } = useFetchProducts()
-    const { items: discounts } = useFetchDiscounts()
 
     return (
         <div>
@@ -17,7 +15,6 @@ function Home() {
                         <div>Loading...</div>
                     )}
             </section>
-            {discounts.length}
         </div>
     );
 }
