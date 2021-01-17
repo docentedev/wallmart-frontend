@@ -4,8 +4,7 @@ import {
     Switch,
     Route,
 } from "react-router-dom";
-import Cart from './components/cart/Cart';
-import CartPage from './containers/cart/Cart';
+import Cart from './containers/cart/Cart';
 import Home from './containers/home/Home';
 import Header from './components/header/Header';
 
@@ -13,10 +12,9 @@ function Router() {
     return (
         <BrowserRouter>
             <Header />
-            <Cart />
             <Switch>
                 <Route path="/cart">
-                    <CartPage />
+                    <Cart />
                 </Route>
                 <Route path="/">
                     <Home />
