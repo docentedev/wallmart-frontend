@@ -1,21 +1,49 @@
-import React from 'react'
-import useCart from '../../hooks/useCart';
+import CartItem from '../../components/cart-item/CartItem'
+import useCart from '../../hooks/useCart'
+import useDiscounts from '../../hooks/useDiscounts'
+import { currencyFormat, messageDiscountOk, messageDiscountNok } from '../../utils'
+
+const showDiscounNok = (ok, nok) => {
+    if (nok.length > 0 && nok[0].discount > (ok.length > 0 ? ok[0].discount : 0))
+        return (<div>{nok[0].text}</div>)
+    return ''
+}
 
 function Cart() {
-    const { cartItems, addItem, substractItem, removeItem, getTotal } = useCart()
+    const {
+        cartItems,
+        cartItemsByBrand,
+        getTotal,
+    } = useCart()
+    const { applyDiscounts } = useDiscounts()
+
+    const {
+        discounts: discountsByItems,
+        total: totalWithDiscount,
+    } = applyDiscounts(cartItemsByBrand)
+
+    const msgDiscountOk = messageDiscountOk(discountsByItems)
+    const msgDiscountNok = messageDiscountNok(discountsByItems)
 
     return (
         <div>
-            {cartItems.map((e, i) => (
-                <div key={i} >
-                    {e.description} | {e.__quantity}
-                    <button onClick={() => substractItem(e)}>-</button>
-                    <button onClick={() => addItem(e)}>+</button>
-                    <button onClick={() => removeItem(e)}>Quitar</button>
-                </div>
+            {cartItems.map((product, i) => (
+                <CartItem product={product} key={i} />
             ))}
             <div>
-                {getTotal()}
+                {showDiscounNok(msgDiscountOk, msgDiscountNok)}
+                <div>
+                    Subtotal de productos: {currencyFormat(getTotal())}<br />
+                </div>
+                {msgDiscountOk.length > 0 && (
+                    <div>
+                        Descuento por marca: -{currencyFormat(msgDiscountOk[0].discount)}
+                    </div>
+                )}
+                <div>
+                    Total a pagar: {currencyFormat(totalWithDiscount)}
+                </div>
+                {msgDiscountOk.length > 0 && (<div>{msgDiscountOk[0].text}</div>)}
             </div>
         </div>
     );
