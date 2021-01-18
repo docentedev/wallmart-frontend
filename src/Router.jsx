@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom'
 import Cart from './containers/cart/Cart'
 import Home from './containers/home/Home'
-import Header from './components/_header/Header'
+import Header from './components/header/Header'
 
 function Router() {
     return (
