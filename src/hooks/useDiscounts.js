@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux'
 
-const useFetchDiscounts = () => {
+const useDiscounts = () => {
     const discounts = useSelector(state => state.discounts.items)
     const applyDiscounts = (itemsByBrand) => {
         let totalCalcWithDiscount = 0
@@ -40,4 +40,4 @@ const useFetchDiscounts = () => {
     return { discounts, applyDiscounts }
 }
 
-export default useFetchDiscounts
+export default useDiscounts
