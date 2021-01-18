@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test CartItem CartItem 1`] = `
+exports[`CartItem Test should call CartItem 1`] = `
 <div
   className="cart_item"
 >

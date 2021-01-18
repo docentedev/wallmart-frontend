@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test App App 1`] = `
+exports[`App test should render App component 1`] = `
 <div
   className="router"
 >
