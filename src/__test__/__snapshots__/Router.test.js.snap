@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Router test should render Router component 1`] = `
+exports[`Router test should render Router component without error 1`] = `
 Array [
   <header
     className="header"
