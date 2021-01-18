@@ -16,7 +16,7 @@ export const groupByBrand = function (array) {
             total: calcTotal(items[key]),
         }
     })
-    
+
     return {
         items,
         calcTotalByBrand,
@@ -29,9 +29,11 @@ export const removeItem = (cartItems, product) => {
     if (itemExist) {
         return cartItems.filter(ci => ci.id !== product.id)
     }
+    return cartItems
 }
 
 export const substractItem = (cartItems, product) => {
+    debugger
     let prevItems = cartItems
     const itemExist = prevItems.find(i => i.id === product.id)
 
@@ -46,6 +48,7 @@ export const substractItem = (cartItems, product) => {
             ...ci
         }))
     }
+    return cartItems
 }
 
 export const addItem = (cartItems, product) => {
