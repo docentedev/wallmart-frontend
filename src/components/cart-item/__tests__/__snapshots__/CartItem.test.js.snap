@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test CartItem CartItem 1`] = `
+<div
+  className="cart_item"
+>
+  <div>
+    <img
+      alt="Cargador Smart Phone USB"
+      src="https://www.lider.cl/catalogo/images/catalogo_no_photo.jpg"
+    />
+  </div>
+  <div
+    className="cart_item__description"
+  >
+    <span>
+      Marca2
+    </span>
+    <p>
+      Cargador Smart Phone USB
+    </p>
+    <strong>
+      Cantidad: 
+    </strong>
+  </div>
+  <div>
+    <div>
+      $15.000
+    </div>
+  </div>
+</div>
+`;
