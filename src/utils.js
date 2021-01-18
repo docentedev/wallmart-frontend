@@ -4,7 +4,7 @@ export const showDiscountNok = (ok, nok) => {
     return ''
 }
 
-const compare = (a, b) => {
+export const compare = (a, b) => {
     if (a.discount < b.discount) {
         return -1;
     }
@@ -20,13 +20,8 @@ export const messageDiscountNok = (items) => {
     Object.keys(items).forEach((key, i) => {
         const item = items[key]
         if (!item.discountApplied) {
-            const missingForDiscount = (<span>
-                Agrega <strong>{currencyFormat(item.missingForDiscount)}</strong>
-            </span>)
-            const discount = (<span>
-                un descuento total de <strong>{currencyFormat(item.discount)}</strong>{' '}
-                    en tu compra!
-            </span>)
+            const missingForDiscount = (<span>Agrega <strong>{currencyFormat(item.missingForDiscount)}</strong></span>)
+            const discount = (<span>un descuento total de <strong>{currencyFormat(item.discount)}</strong> en tu compra!</span>)
             itemsMessage.push({
                 text: (<p>{missingForDiscount} más en productos {key} y aprovecha {discount}</p>),
                 discount: item.discount
@@ -43,12 +38,8 @@ export const messageDiscountOk = (items) => {
     Object.keys(items).forEach((key) => {
         const item = items[key]
         if (item.discountApplied) {
-            const total = (<span>
-                comprado <strong>{currencyFormat(item.threshold)}</strong> de productos
-            </span>)
-            const discount = (<span>
-                un descuento de <strong>{currencyFormat(item.discount)}</strong>
-            </span>)
+            const total = (<span>comprado <strong>{currencyFormat(item.threshold)}</strong> de productos</span>)
+            const discount = (<span>un descuento de <strong>{currencyFormat(item.discount)}</strong></span>)
             message.push({
                 text: (<p>* Se aplicó {discount} por haber {total} {key}!.</p>),
                 discount: item.discount,
