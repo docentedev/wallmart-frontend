@@ -23,6 +23,15 @@ describe('useDiscounts test', () => {
     expect(typeof result.current).toBe('object')
     expect(result.current.applyDiscounts(itemsByBrand)).toStrictEqual({
       discounts: {
+        Marca2: {
+          discount: 0,
+          discountApplied: false,
+          hasDiscount: false,
+          missingForDiscount: 0,
+          threshold: 0,
+          total: 15000,
+          totalWithDiscount: 15000,
+        },
         Marca6: {
           discount: 5000,
           discountApplied: true,
@@ -34,7 +43,7 @@ describe('useDiscounts test', () => {
             : 85000,
         },
       },
-      total: 85000,
+      total: 100000,
     })
   })
 })
