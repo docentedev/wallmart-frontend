@@ -19,11 +19,11 @@ const Product = ({ product }) => {
             <div className={styles.product__actions}>
                 {cartItem ? (
                     <div className={styles.product__cart_control}>
-                        <button onClick={() => substractItem(product)}>
+                        <button className="substract-button" onClick={() => substractItem(product)}>
                             <MinusIcon size={12} />
                         </button>
                         <span>{cartItem.__quantity}</span>
-                        <button onClick={() => addItem(product)}>
+                        <button className="add-button" onClick={() => addItem(product)}>
                             <PlusIcon size={12} />
                         </button>
                     </div>
