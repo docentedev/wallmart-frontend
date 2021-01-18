@@ -1,10 +1,7 @@
-import { Plus as PlusIcon, Minus as MinusIcon } from 'react-feather'
-import useCart from '../../hooks/useCart'
 import { currencyFormat } from '../../utils'
 import styles from './CartItem.module.css'
 
 const CartItem = ({ product }) => {
-    const { addItem, substractItem, removeItem } = useCart()
 
     return (
         <div className={styles.cart_item}>
