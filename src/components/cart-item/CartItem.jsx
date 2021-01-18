@@ -3,7 +3,7 @@ import useCart from '../../hooks/useCart'
 import { currencyFormat } from '../../utils'
 import styles from './CartItem.module.css'
 
-const CartItem = ({ product, displayActions = false }) => {
+const CartItem = ({ product }) => {
     const { addItem, substractItem, removeItem } = useCart()
 
     return (
@@ -20,15 +20,6 @@ const CartItem = ({ product, displayActions = false }) => {
                 <div>
                     {currencyFormat(product.price)}
                 </div>
-                {displayActions && <div>
-                    <button onClick={() => substractItem(product)}>
-                        <MinusIcon size={12} />
-                    </button>
-                    <button onClick={() => addItem(product)}>
-                        <PlusIcon size={12} />
-                    </button>
-                    <button onClick={() => removeItem(product)}>Quitar</button>
-                </div>}
             </div>
         </div>
     )
