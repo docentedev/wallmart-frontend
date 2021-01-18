@@ -7,8 +7,8 @@ jest.mock('react-redux', () => ({
   useDispatch: jest.fn()
 }))
 
-describe('useFetchDiscounts', () => {
-  it('useFetchDiscounts test', () => {
+describe('useFetchDiscounts test', () => {
+  it('should call hook without error', () => {
     const { result } = renderHook(() => useFetchDiscounts())
     expect(typeof result.current).toBe('object')
   })

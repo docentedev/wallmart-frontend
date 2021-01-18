@@ -14,22 +14,22 @@ import {
 } from '../mock-data'
 
 describe('Utils test', () => {
-    it('messageDiscountNok', () => {
+    it('should call messageDiscountNok', () => {
         const message = messageDiscountNok(items)
         expect(message[0].discount).toBe(8700)
     })
 
-    it('messageDiscountOk', () => {
+    it('should call messageDiscountOk', () => {
         const message = messageDiscountOk(items)
         expect(message[0].discount).toBe(26000)
     })
 
-    it('calcTotal', () => {
+    it('should call calcTotal', () => {
         const message = calcTotal(cartItems)
         expect(message).toBe(120000)
     })
 
-    it('currencyFormat', () => {
+    it('should call currencyFormat', () => {
         const message = currencyFormat(121312313542399)
         expect(message).toBe('$121.312.313.542.399')
     })
@@ -44,18 +44,18 @@ describe('Utils test', () => {
         expect(message).toBe('A')
     })
 
-    it('compare A', () => {
-        const message = compare({ discount: 1 }, { discount: 0})
+    it('should call compare A', () => {
+        const message = compare({ discount: 1 }, { discount: 0 })
         expect(message).toBe(1)
     })
 
-    it('compare B', () => {
-        const message = compare({ discount: 0 }, { discount: 1})
+    it('should call compare B', () => {
+        const message = compare({ discount: 0 }, { discount: 1 })
         expect(message).toBe(-1)
     })
 
-    it('compare C', () => {
-        const message = compare({ discount: 1 }, { discount: 1})
+    it('should call compare C', () => {
+        const message = compare({ discount: 1 }, { discount: 1 })
         expect(message).toBe(0)
     })
 })

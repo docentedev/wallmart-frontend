@@ -8,8 +8,8 @@ jest.mock('react-router-dom', () => ({
     Link: () => (<div className="link">Link</div>),
 }))
 
-describe('Test Header', () => {
-    it('Header', () => {
+describe('Header test', () => {
+    it('should render Header component', () => {
         const testRenderer = TestRenderer.create(<Header />)
         const testInstance = testRenderer.root
 

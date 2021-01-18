@@ -13,8 +13,8 @@ jest.mock('../Router', () => ({
     default: () => (<div className="router">Router</div>),
 }))
 
-describe('Test App', () => {
-    it('App', () => {
+describe('App test', () => {
+    it('should render App component', () => {
         const testRenderer = TestRenderer.create(<App />)
         const testInstance = testRenderer.root
 

@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Product test should Product render without error 1`] = `
+<article
+  className="product"
+>
+  <div
+    className="product__image"
+  >
+    <img
+      alt="Cargador Smart Phone USB"
+      src="https://www.lider.cl/catalogo/images/catalogo_no_photo.jpg"
+    />
+  </div>
+  <div
+    className="product__info"
+  >
+    <p>
+      <strong>
+        Marca2
+      </strong>
+       
+      Cargador Smart Phone USB
+    </p>
+    <strong>
+      $15.000
+    </strong>
+  </div>
+  <div
+    className="product__actions"
+  >
+    <div
+      className="product__cart_control"
+    >
+      <button
+        className="substract-button"
+        onClick={[Function]}
+      >
+        <div
+          className="minus-icon"
+        >
+          -
+        </div>
+      </button>
+      <span>
+        2
+      </span>
+      <button
+        className="add-button"
+        onClick={[Function]}
+      >
+        <div
+          className="plus-icon"
+        >
+          +
+        </div>
+      </button>
+    </div>
+  </div>
+</article>
+`;

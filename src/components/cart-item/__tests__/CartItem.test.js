@@ -3,8 +3,8 @@ import TestRenderer from 'react-test-renderer'
 
 import CartItem from '../CartItem'
 
-describe('Test CartItem', () => {
-    it('CartItem', () => {
+describe('CartItem Test', () => {
+    it('should call CartItem', () => {
         const product = {
             brand: 'Marca2',
             description: 'Cargador Smart Phone USB',
