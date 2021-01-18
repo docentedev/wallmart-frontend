@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CartItem Test should call CartItem 1`] = `
+exports[`CartItem Test should render CartItem without error 1`] = `
 <div
   className="cart_item"
 >
   <div>
     <img
-      alt="Cargador Smart Phone USB"
+      alt="Parlante Bluetooth LoudTeeth 1000"
       src="https://www.lider.cl/catalogo/images/catalogo_no_photo.jpg"
     />
   </div>
@@ -14,10 +14,10 @@ exports[`CartItem Test should call CartItem 1`] = `
     className="cart_item__description"
   >
     <span>
-      Marca2
+      Marca6
     </span>
     <p>
-      Cargador Smart Phone USB
+      Parlante Bluetooth LoudTeeth 1000
     </p>
     <strong>
       Cantidad: 
@@ -25,7 +25,7 @@ exports[`CartItem Test should call CartItem 1`] = `
   </div>
   <div>
     <div>
-      $15.000
+      $90.000
     </div>
   </div>
 </div>

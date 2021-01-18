@@ -3,16 +3,10 @@ import TestRenderer from 'react-test-renderer'
 
 import CartItem from '../CartItem'
 
+import { product } from '../../../mock-data'
+
 describe('CartItem Test', () => {
-    it('should call CartItem', () => {
-        const product = {
-            brand: 'Marca2',
-            description: 'Cargador Smart Phone USB',
-            id: 5,
-            image: 'https://www.lider.cl/catalogo/images/catalogo_no_photo.jpg',
-            price: 15000,
-            _id: '6000e5dbdd32961e14a9688a',
-        }
+    it('should render CartItem without error', () => {
 
         const testRenderer = TestRenderer.create(<CartItem product={product} />)
         const testInstance = testRenderer.root

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Test should render Home without error 1`] = `
+<div>
+  <section
+    className="area_products"
+  >
+    <div
+      className="product"
+    >
+      Product
+    </div>
+  </section>
+</div>
+`;

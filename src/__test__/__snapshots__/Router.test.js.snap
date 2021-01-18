@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Router test should render Router component 1`] = `
+Array [
+  <header
+    className="header"
+  >
+    <div
+      className="header__logo_container"
+    >
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        <img
+          alt="Lider Logo"
+          src="lider-logo.svg"
+        />
+      </a>
+    </div>
+    <div>
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        Productos
+      </a>
+      <a
+        href="/cart"
+        onClick={[Function]}
+      >
+        Carrito
+      </a>
+    </div>
+  </header>,
+  <div>
+    <section
+      className="area_products"
+    >
+      <div>
+        Cargando...
+      </div>
+    </section>
+  </div>,
+]
+`;
