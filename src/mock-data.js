@@ -48,6 +48,118 @@ export const cartItems = [
         "__quantity": 2
     }
 ]
+export const itemsByBrand = {
+    "items": {
+        "Marca2": [
+            {
+                "_id": "6000e5dbdd32961e14a9688a",
+                "id": 5,
+                "brand": "Marca2",
+                "description": "Cargador Smart Phone USB",
+                "image": "https://www.lider.cl/catalogo/images/catalogo_no_photo.jpg",
+                "price": 15000,
+                "__quantity": 1
+            }
+        ],
+        "Marca6": [
+            {
+                "_id": "6000e5dbdd32961e14a96896",
+                "id": 17,
+                "brand": "Marca6",
+                "description": "Parlante Bluetooth LoudTeeth 1000",
+                "image": "https://www.lider.cl/catalogo/images/catalogo_no_photo.jpg",
+                "price": 90000,
+                "__quantity": 1
+            }
+        ]
+    },
+    "calcTotalByBrand": {
+        "Marca2": {
+            "missingForDiscount": null,
+            "hasDiscount": false,
+            "discountApplied": false,
+            "total": 15000
+        },
+        "Marca6": {
+            "missingForDiscount": null,
+            "hasDiscount": false,
+            "discountApplied": false,
+            "total": 90000
+        }
+    }
+}
+
 
 export const cartItemsADiscount = [{ discount: 26000, text: 'A' }, { discount: 8700 }]
 export const cartItemsBDiscount = [{ discount: 12000, text: 'B' }, { discount: 5000 }]
+
+export const items2 = [
+    {
+        '_id': '6000e5dbdd32961e14a9688a',
+        'id': 5,
+        'brand': 'Marca2',
+        'description': 'Cargador Smart Phone USB',
+        'image': 'https://www.lider.cl/catalogo/images/catalogo_no_photo.jpg',
+        'price': 15000,
+        '__quantity': 2
+    },
+    {
+        '_id': '6000e5dbdd32961e14a96896',
+        'id': 17,
+        'brand': 'Marca6',
+        'description': 'Parlante Bluetooth LoudTeeth 1000',
+        'image': 'https://www.lider.cl/catalogo/images/catalogo_no_photo.jpg',
+        'price': 90000,
+        '__quantity': 1
+    },
+    {
+        '_id': '6000e5dbdd32961e14a96889',
+        'id': 4,
+        'brand': 'Marca2',
+        'description': 'Refrigerador',
+        'image': 'https://www.lider.cl/catalogo/images/catalogo_no_photo.jpg',
+        'price': 20000,
+        '__quantity': 1
+    }
+]
+
+export const product = {
+    brand: 'Marca6',
+    description: 'Parlante Bluetooth LoudTeeth 1000',
+    id: 17,
+    image: 'https://www.lider.cl/catalogo/images/catalogo_no_photo.jpg',
+    price: 90000,
+    _id: '6000e5dbdd32961e14a96896',
+}
+
+export const product2 = {
+    brand: 'Marca2',
+    description: 'Parlante Bluetooth LoudTeeth 1000',
+    id: 18,
+    image: 'https://www.lider.cl/catalogo/images/catalogo_no_photo.jpg',
+    price: 90000,
+    _id: '6000e5dbdd32961e14a96897',
+}
+
+export const productQuantity2 = {
+    brand: 'Marca6',
+    description: 'Parlante Bluetooth LoudTeeth 1000',
+    id: 17,
+    __quantity: 2,
+    image: 'https://www.lider.cl/catalogo/images/catalogo_no_photo.jpg',
+    price: 90000,
+    _id: '6000e5dbdd32961e14a96896',
+}
+
+export const productQuantity1 = {
+    brand: 'Marca6',
+    description: 'Parlante Bluetooth LoudTeeth 1000',
+    id: 17,
+    __quantity: 1,
+    image: 'https://www.lider.cl/catalogo/images/catalogo_no_photo.jpg',
+    price: 90000,
+    _id: '6000e5dbdd32961e14a96896',
+}
+
+
+export const voidCart = []
