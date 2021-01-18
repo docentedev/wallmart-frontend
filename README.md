@@ -1,5 +1,9 @@
 # Getting Started with Create React App
 
+[![docentedev](https://circleci.com/gh/docentedev/wallmart-frontend/tree/main.svg?style=svg)](https://circleci.com/gh/docentedev/wallmart-frontend)
+[![codecov](https://codecov.io/gh/docentedev/wallmart-frontend/branch/main/graph/badge.svg?token=KMAHZ7P48O)](https://codecov.io/gh/docentedev/wallmart-frontend)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 ## Heroku Deploy commands
 
 - Push last code:`heroku container:push web -a wallmart-ecommerce-front`
