@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BrandFilter test should render BrandFilter component 1`] = `
+<div
+  className="brand_filter"
+>
+  <h3>
+    Filtrar productos por descuento
+  </h3>
+  <div>
+    <button
+      onClick={[Function]}
+    >
+      Sin filtro
+      <span>
+        <svg
+          fill="none"
+          height={16}
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+          width={16}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M22 11.08V12a10 10 0 1 1-5.93-9.14"
+          />
+          <polyline
+            points="22 4 12 14.01 9 11.01"
+          />
+        </svg>
+      </span>
+    </button>
+    <button
+      data-active="active"
+      onClick={[Function]}
+    >
+       
+      <br />
+      $1.000
+       dcto
+      <span>
+        <svg
+          fill="none"
+          height={16}
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+          width={16}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M22 11.08V12a10 10 0 1 1-5.93-9.14"
+          />
+          <polyline
+            points="22 4 12 14.01 9 11.01"
+          />
+        </svg>
+      </span>
+    </button>
+    <button
+      data-active="active"
+      onClick={[Function]}
+    >
+       
+      <br />
+      $2.000
+       dcto
+      <span>
+        <svg
+          fill="none"
+          height={16}
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+          width={16}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M22 11.08V12a10 10 0 1 1-5.93-9.14"
+          />
+          <polyline
+            points="22 4 12 14.01 9 11.01"
+          />
+        </svg>
+      </span>
+    </button>
+  </div>
+</div>
+`;

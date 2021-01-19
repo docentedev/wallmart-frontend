@@ -3,6 +3,11 @@ import TestRenderer from 'react-test-renderer'
 
 import Cart from '../Cart'
 
+jest.mock('react-router-dom', () => ({
+    __esModule: true,
+    Link: () => (<div className="link">Link</div>),
+}))
+
 jest.mock('react-redux', () => ({
     ...jest.requireActual('react-redux'),
     useSelector: jest.fn(),

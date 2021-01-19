@@ -3,6 +3,11 @@ import TestRenderer from 'react-test-renderer'
 
 import App from '../App'
 
+jest.mock('../hooks/useFetchProducts', () => ({
+    __esModule: true,
+    default: () => ({ items: [{}] }),
+}))
+
 jest.mock('../hooks/useFetchDiscounts', () => ({
     __esModule: true,
     default: () => ({ discounts: [{}] }),

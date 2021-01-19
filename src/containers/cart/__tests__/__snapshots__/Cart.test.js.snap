@@ -7,7 +7,12 @@ exports[`Cart Test should render Cart without error 1`] = `
   <div
     className="cart_container__no_product"
   >
-    Aun no ha agregado ningun producto
+    Aún no ha agregado ningún producto
+    <div
+      className="link"
+    >
+      Link
+    </div>
   </div>
 </div>
 `;

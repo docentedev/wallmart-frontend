@@ -34,13 +34,120 @@ Array [
     </div>
   </header>,
   <div>
-    <section
-      className="area_products"
+    <div
+      className="search"
     >
-      <div>
-        Cargando...
+      <svg
+        fill="none"
+        height={24}
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+        width={24}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx="11"
+          cy="11"
+          r="8"
+        />
+        <line
+          x1="21"
+          x2="16.65"
+          y1="21"
+          y2="16.65"
+        />
+      </svg>
+      <input
+        onChange={[Function]}
+        placeholder="Ingresa producto a buscar"
+        value=""
+      />
+    </div>
+    <div
+      className="home_container"
+    >
+      <div
+        className="home_container__brand_filter"
+      >
+        <div
+          className="brand_filter"
+        >
+          <h3>
+            Filtrar productos por descuento
+          </h3>
+          <div>
+            <button>
+              Sin filtro
+              <span>
+                <svg
+                  fill="none"
+                  height={16}
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                  width={16}
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M22 11.08V12a10 10 0 1 1-5.93-9.14"
+                  />
+                  <polyline
+                    points="22 4 12 14.01 9 11.01"
+                  />
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
       </div>
-    </section>
+      <section
+        className="area_products"
+      >
+        <article
+          className="product"
+        >
+          <div
+            className="product__image"
+          >
+            <img
+              alt="Parlante Bluetooth LoudTeeth 1000"
+              src="https://www.lider.cl/catalogo/images/catalogo_no_photo.jpg"
+            />
+          </div>
+          <div
+            className="product__info"
+          >
+            <p>
+              <strong>
+                Marca6
+              </strong>
+               
+              Parlante Bluetooth LoudTeeth 1000
+            </p>
+            <strong>
+              $90.000
+            </strong>
+          </div>
+          <div
+            className="product__actions"
+          >
+            <div>
+              <button
+                className="product__add_button"
+                onClick={[Function]}
+              >
+                Agregar
+              </button>
+            </div>
+          </div>
+        </article>
+      </section>
+    </div>
   </div>,
 ]
 `;

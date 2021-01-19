@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import TestRenderer from 'react-test-renderer'
-import { act } from 'react-dom/test-utils';
+import { act } from 'react-dom/test-utils'
 
 import Product from '../Product'
 
