@@ -6,6 +6,7 @@
     transition: all .4s ease-in-out 0s;
     margin-bottom: 24px;
     position: relative;
+    overflow: hidden;
 }
 
 .product:hover {

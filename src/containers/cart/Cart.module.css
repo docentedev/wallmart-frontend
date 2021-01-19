@@ -65,3 +65,20 @@
 .cart_container__cart_card__resume__item > div:nth-child(even) {
     text-align: right;
 }
+
+.cart_container__no_product a {
+    font-weight: 400;
+    text-decoration: none;
+    display: block;
+    left: 250px;
+    height: 40px;
+    width: 214px;
+    background-color: #041e42;
+    color: #fff;
+    margin-top: 8px;
+    border-radius: 3px;
+    font-size: 1rem;
+    line-height: 2.4;
+    margin-right: 10px;
+    padding: 0 10px;
+}

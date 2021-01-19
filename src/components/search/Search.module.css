@@ -1,0 +1,58 @@
+.search {
+    position: fixed;
+    z-index: 2;
+    right: 30px;
+    top: 10px;
+    border: none;
+    height: 38px;
+    background: rgb(255, 255, 255);
+    width: 260px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.search svg {
+    top: 8px;
+    color: #0371ce;
+    position: absolute;
+    left: 8px;
+    pointer-events: none;
+}
+
+.search input {
+    border: none;
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+    padding: 0 15px 0 40px;
+}
+
+.search input:focus {
+    outline: none;
+}
+
+@media (max-width: 650px) {
+    .search {
+        box-shadow: 0 0 12px 0 #e6e5e5;
+        top: 72px;
+        left: 0;
+        right: 0;
+        width: 90%;
+        margin: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .search {
+        width: calc(100% - 92px);
+        right: 0;
+        left: auto;
+        box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, .25);
+        border-radius: 0;
+        top: 59px;
+        height: 54px;    
+    }
+    .search svg {
+        top: 16px;
+    }
+}

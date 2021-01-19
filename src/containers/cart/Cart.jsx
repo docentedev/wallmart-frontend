@@ -1,3 +1,7 @@
+import { Link } from 'react-router-dom'
+import {
+    ShoppingBag,
+} from 'react-feather'
 import CartItem from '../../components/cart-item/CartItem'
 import useCart from '../../hooks/useCart'
 import useDiscounts from '../../hooks/useDiscounts'
@@ -54,7 +58,10 @@ function Cart() {
                     )}
                 </div>
             </div>) : (
-                    <div className={styles.cart_container__no_product}>Aun no ha agregado ningun producto</div>
+                    <div className={styles.cart_container__no_product}>
+                        Aún no ha agregado ningún producto
+                        <Link to="/"><ShoppingBag size={14} /> Ir a listado de productos</Link>
+                    </div>
                 )}
         </div>
     );

@@ -1,0 +1,106 @@
+.brand_filter {
+    border-radius: 16px;
+    background-color: #ffffff;
+    transition: all .4s ease-in-out 0s;
+    height: auto;
+    left: 0;
+    right: 0;
+    position: sticky;
+    top: 80px;
+    padding: 10px;
+}
+
+.brand_filter h3 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #6d6e71;
+    margin: 10px 0 10px 0;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.brand_filter h3:after {
+    position: absolute;
+    content: '';
+    height: 4px;
+    background-image: linear-gradient(rgba(249, 249, 249, 0), rgba(0, 0, 0, 0.12));
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}
+
+.brand_filter button {
+    text-align: left;
+    background: white;
+    border: none;
+    display: block;
+    width: 100%;
+    height: 32px;
+    border-radius: 23px;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .25);
+    background-color: #fff;
+    cursor: pointer;
+    margin-bottom: 12px;
+    padding: 0 10px 0 34px;
+    position: relative;
+}
+
+.brand_filter button br {
+    display: none;
+}
+
+.brand_filter button span {
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 16px;
+    color: #0371ce;
+}
+
+@media (max-width: 650px) {
+    .brand_filter {
+        top: 130px;
+    }
+}
+
+@media (max-width: 480px) {
+    .brand_filter button br {
+        display: block;
+    }
+    .brand_filter {
+        height: calc(100vh - 60px);
+        left: 0;
+        position: fixed;
+        top: 59px;
+        padding: 0;
+        z-index: 2;
+        width: 90px;
+        border-radius: 0;
+    }
+    .brand_filter>div {
+        overflow-y: scroll;
+        height: 100%;
+    }
+    .brand_filter h3 {
+        display: none;
+    }
+    .brand_filter button {
+        padding: 21px 0 0 0;
+        margin-bottom: 0;
+        border-radius: 0;
+        width: 100%;
+        overflow: hidden;
+        height: 56px;
+        font-size: 11px;
+        text-align: center;
+    }
+    .brand_filter button span {
+        bottom: auto;
+        right: 0;
+        top: 8px;
+        left: 0;
+        width: 16px;
+    }
+}

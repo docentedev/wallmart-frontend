@@ -33,7 +33,6 @@ export const removeItem = (cartItems, product) => {
 }
 
 export const substractItem = (cartItems, product) => {
-    debugger
     let prevItems = cartItems
     const itemExist = prevItems.find(i => i.id === product.id)
 

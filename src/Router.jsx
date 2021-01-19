@@ -8,7 +8,7 @@ import Cart from './containers/cart/Cart'
 import Home from './containers/home/Home'
 import Header from './components/header/Header'
 
-function Router() {
+function Router({ products }) {
     return (
         <BrowserRouter>
             <Header />
@@ -17,7 +17,7 @@ function Router() {
                     <Cart />
                 </Route>
                 <Route path="/">
-                    <Home />
+                    <Home products={products} />
                 </Route>
             </Switch>
         </BrowserRouter>
