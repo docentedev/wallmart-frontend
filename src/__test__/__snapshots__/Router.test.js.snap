@@ -61,6 +61,7 @@ Array [
         />
       </svg>
       <input
+        aria-label="search-input"
         onChange={[Function]}
         placeholder="Ingresa producto a buscar"
         value=""

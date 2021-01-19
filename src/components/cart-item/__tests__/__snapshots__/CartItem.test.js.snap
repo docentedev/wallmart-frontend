@@ -28,6 +28,7 @@ exports[`CartItem Test should render CartItem without error 1`] = `
   >
     <div>
       <button
+        className="substract-button"
         onClick={[Function]}
       >
         <svg
@@ -50,6 +51,7 @@ exports[`CartItem Test should render CartItem without error 1`] = `
         </svg>
       </button>
       <button
+        className="add-button"
         onClick={[Function]}
       >
         <svg
@@ -78,6 +80,7 @@ exports[`CartItem Test should render CartItem without error 1`] = `
         </svg>
       </button>
       <button
+        className="remove-button"
         onClick={[Function]}
       >
         <svg

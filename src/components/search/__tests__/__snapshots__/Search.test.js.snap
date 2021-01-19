@@ -28,6 +28,7 @@ exports[`Search test should render Search component 1`] = `
     />
   </svg>
   <input
+    aria-label="search-input"
     onChange={[Function]}
     placeholder="Ingresa producto a buscar"
     value=""

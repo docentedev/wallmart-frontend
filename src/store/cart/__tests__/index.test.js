@@ -1,5 +1,11 @@
 import reducer from '../index'
 
+import {
+    addDataResult,
+    removeDataResult,
+    substractDataResult,
+} from '../../../mock-data'
+
 const initialState = {
     items: [],
     itemsByBrand: {
@@ -8,7 +14,7 @@ const initialState = {
     }
 }
 
-describe('Store test', () => {
+describe('Store Cart test', () => {
     it('call reducer default', () => {
         const data = reducer(initialState, { type: 'ANY_ACTION_TYPE', payload: {} })
         expect(data).toStrictEqual({
@@ -25,34 +31,22 @@ describe('Store test', () => {
             type: 'CART__ADD_PRODUCT',
             payload: { brand: 'Marca2', id: 12, description: 'Foo', price: 12000 }
         })
-        expect(data).toStrictEqual({
-            'items': [{
-                '__quantity': 1,
-                'brand': 'Marca2',
-                'description':
-                    'Foo',
-                'id': 12,
-                'price': 12000,
-            }],
-            'itemsByBrand': {
-                'calcTotalByBrand': {
-                    'Marca2': {
-                        'discountApplied': false,
-                        'hasDiscount': false,
-                        'missingForDiscount': null,
-                        'total': 12000,
-                    },
-                },
-                'items': {
-                    'Marca2': [{
-                        '__quantity': 1,
-                        'brand': 'Marca2',
-                        'description': 'Foo',
-                        'id': 12,
-                        'price': 12000,
-                    }],
-                },
-            },
+        expect(data).toStrictEqual(addDataResult)
+    })
+
+    it('call reducer remove item', () => {
+        const data = reducer(initialState, {
+            type: 'CART__REMOVE_PRODUCT',
+            payload: { brand: 'Marca2', id: 12, description: 'Foo', price: 12000 }
         })
+        expect(data).toStrictEqual(removeDataResult)
+    })
+
+    it('call reducer substract item', () => {
+        const data = reducer(initialState, {
+            type: 'CART__SUBSTRACT_PRODUCT',
+            payload: { brand: 'Marca2', id: 12, description: 'Foo', price: 12000 }
+        })
+        expect(data).toStrictEqual(substractDataResult)
     })
 })

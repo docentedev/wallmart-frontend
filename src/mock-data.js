@@ -1,3 +1,35 @@
+export const substractDataResult = { "items": [], "itemsByBrand": { "calcTotalByBrand": {}, "items": {} } }
+export const removeDataResult = { "items": [], "itemsByBrand": { "calcTotalByBrand": {}, "items": {} } }
+export const addDataResult = {
+    'items': [{
+        '__quantity': 1,
+        'brand': 'Marca2',
+        'description':
+            'Foo',
+        'id': 12,
+        'price': 12000,
+    }],
+    'itemsByBrand': {
+        'calcTotalByBrand': {
+            'Marca2': {
+                'discountApplied': false,
+                'hasDiscount': false,
+                'missingForDiscount': null,
+                'total': 12000,
+            },
+        },
+        'items': {
+            'Marca2': [{
+                '__quantity': 1,
+                'brand': 'Marca2',
+                'description': 'Foo',
+                'id': 12,
+                'price': 12000,
+            }],
+        },
+    },
+}
+
 export const items = {
     "Marca2": {
         "missingForDiscount": 25000,

@@ -1,5 +1,5 @@
 import { renderHook } from '@testing-library/react-hooks'
-import useCart from '../useCart';
+import useCart from '../useCart'
 
 jest.mock('react-redux', () => ({
   ...jest.requireActual('react-redux'),

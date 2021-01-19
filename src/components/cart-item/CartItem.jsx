@@ -21,13 +21,13 @@ const CartItem = ({ product }) => {
             </div>
             <div className={styles.cart_item__actions}>
                 <div>
-                    <button onClick={() => substractItem(product)}>
+                    <button className="substract-button" onClick={() => substractItem(product)}>
                         <MinusIcon size={16} />
                     </button>
-                    <button onClick={() => addItem(product)}>
+                    <button className="add-button" onClick={() => addItem(product)}>
                         <PlusIcon size={16} />
                     </button>
-                    <button onClick={() => removeItem(product)}>
+                    <button className="remove-button" onClick={() => removeItem(product)}>
                         <TrashIcon size={16} />
                     </button>
                 </div>
